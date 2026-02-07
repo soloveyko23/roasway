@@ -1,0 +1,221 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.tabs-type-one {
+  li {
+    @apply whitespace-nowrap;
+  }
+  .active {
+    @apply    border-b-2 border-primary-600 rounded-t-lg;
+    a {
+      @apply text-primary-600;
+    }
+  }
+}
+
+.scroll-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+.status-icon {
+  @apply w-2 h-2 rounded-full min-w-2;
+}
+.shadow-columns {
+  box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.5); /* Тень только справа */
+}
+
+.table-line {
+  // min-width: 10rem;
+}
+@media (min-width:$mobile){
+  .sticky-row {
+    position: sticky !important;
+    left: 0;
+    // background-color: white;
+    z-index: 10;
+  }
+  .sticky {
+    position: sticky !important;
+    top: 0;
+    // background-color: white;
+    z-index: 10;
+  } 
+}
+.resizable {
+  position: relative;
+  .resizer {
+    width: 6px;
+    height: 100%;
+    @apply rounded-md hover:bg-Gray-500/50 active:bg-Gray-500/90;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -3.5px;
+    cursor: col-resize;
+    user-select: none;
+    z-index: 5;
+    
+  }
+}
+
+
+.select-date-wrapper {
+  .active {
+    @apply text-primary-600 bg-Gray-100;
+  }
+}
+
+
+.button-primary {
+  @apply text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 transition-colors;
+}
+
+.button-secondary {
+  @apply text-Gray-900 hover:bg-primary-700 focus:ring-4 focus:ring-blue-300 hover:text-white font-medium rounded-lg text-sm px-5 py-2.5 border border-Gray-400 transition-colors;
+}
+
+.button-secondary-blue {
+  @apply inline-flex items-center gap-2 text-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-blue-300 hover:text-white font-medium rounded-lg text-sm px-5 py-2.5 border border-primary-600 transition-colors;
+}
+
+.button {
+  &.button-xs {
+    @apply py-1.5 px-3 min-h-[2.125rem] text-xs;
+  }
+}
+
+.countries-list-table {
+  @apply inline-flex gap-2 items-center;
+  img {
+    @apply min-w-7;
+  }
+}
+
+
+
+canvas {
+  display: block;
+
+  @media (max-width:$mobile){
+    //  max-height: 18.75rem; 
+  }
+}
+.custom-legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.custom-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6B7280;
+  font-weight: 500;
+  cursor: pointer;
+}
+.custom-legend-item.active {
+  font-weight: bold;
+  color: #374151;
+}
+.custom-legend-item .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.tooltip-custom {
+  position: absolute;
+  pointer-events: none;
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #374151;
+  z-index: 1000;
+  transform: translate(-50%, -120%);
+}
+
+
+    /* CSS стили для тултипа */
+    .chart-tooltip {
+      background: linear-gradient(90deg, #e0f2fe, #f9fafb); /* Градиентный фон */
+      border-radius: 8px; /* Закругленные углы */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+      color: #334155; /* Темный текст */
+      font-family: "Inter", sans-serif; /* Приятная типографика */
+      font-size: 14px; /* Размер текста */
+      padding: 10px 14px; /* Отступы */
+      pointer-events: none; /* Отключение событий мыши */
+      text-align: left; /* Выравнивание текста */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+    }
+
+    .chart-tooltip div {
+      margin-bottom: 5px; /* Отступ между строками */
+    }
+
+    .chart-tooltip .tooltip-label {
+      font-weight: 500; /* Полужирный шрифт для заголовков */
+    }
+
+    .chart-tooltip .tooltip-value {
+      font-weight: 700; /* Жирный шрифт для значений */
+      color: #1d4ed8; /* Синий цвет значений */
+    }
+
+
+
+.widget-body .widget-chart-container .widget-content-row{
+  @media (min-width: 1536px) {
+    @apply flex-1 h-full border-b-2 border-Gray-200 pb-5;
+    &:last-child {
+      @apply border-b-0 pb-0 mb-0;
+    }
+  }
+  @media (max-width: 1535px) and (min-width: 640px) {
+    @apply border-r border-Gray-200 pr-4 mr-4 gap-y-2 flex items-center justify-center flex-col;
+    &:last-child {
+      @apply border-r-0 pr-0 mr-0;
+    }
+  }
+  @media (max-width: 640px) {
+    @apply border-b border-Gray-200 pb-4 mb-4 gap-y-2 flex items-center justify-center flex-col;
+    &:last-child {
+      @apply border-b-0 pb-0 mb-0;
+    }
+  }
+  
+
+
+}
+
+
+.widget-stat-item {
+  canvas {
+    @apply w-full !h-20;
+  }
+}
+.chart-marker {
+  @apply border-4 border-transparent drop-shadow-md rounded-full;
+  &:hover {
+    @apply border-white z-50  ;
+  }
+
+
+}
+
+.marker-tooltip {
+  .price-up {
+
+    @apply bg-secondaryTwo-200 px-2 py-1 rounded-lg text-secondaryTwo-800;
+  }
+  .price-down {
+    @apply bg-systemRed-200 text-systemRed-600 px-2 py-1 rounded-lg;
+  }
+
+}
+
+

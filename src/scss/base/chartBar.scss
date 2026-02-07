@@ -1,0 +1,46 @@
+.chart-wrapper {
+  
+  .chart-overflow  {
+    height: 100%;
+    width: 100%;           /* на всю доступную ширину родителя */
+    overflow-x: auto;      /* горизонтальная прокрутка */
+    overflow-y: hidden;    /* вертикальную обычно отключаем */
+
+    
+  
+  }
+  &--bar {
+    @media (min-width:$mobile){
+      min-height: 32rem; 
+    }
+    @media (max-width:$mobile){
+      min-height: 25rem; 
+    }
+    .chart-inner {
+      min-width: 800px;
+      @media (min-width:$mobile){
+        min-height: 32rem; 
+      }
+      @media (max-width:$mobile){
+        min-height: 25rem; 
+      }
+    }
+    .custom-legend {
+      margin-top: 1.25rem;
+    }
+  }
+  &--horiz-bar {
+    canvas {
+      min-height: 400px !important;
+      height: auto !important;
+    }
+  }
+  &--line {
+    canvas {
+      // min-height: 25rem !important;
+      // min-width: 50rem;
+      height: auto !important;
+    }
+  }
+}
+

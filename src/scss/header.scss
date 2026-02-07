@@ -1,0 +1,16 @@
+.header {
+  @apply relative lg:py-0 py-3;
+  &__menu {
+    @apply lg:relative absolute top-[100%] left-0 right-0 px-4 z-50 lg:bg-transparent bg-white lg:shadow-none shadow-md; 
+    .menu__link {
+      @apply transition-colors hover:text-primary-600 sm:px-2.5 px-0 sm:py-5 py-3;
+      &.active {
+        @apply font-medium;
+        &::before{
+          content:'';
+          @apply block h-[2px] w-full absolute bottom-0 left-0 right-0 rounded bg-primary-600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="js/app.min.js"></script>
+<script>
+// script.js
+
+let modalCount = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Обработчик для кнопок открытия модалов
+  const openModalButtons = document.querySelectorAll('.open-modal');
+  openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-modal');
+      openModal(modalId);
+    });
+  });
+
+  // Обработчик для кнопок закрытия
+  const closeModalButtons = document.querySelectorAll('.close-btn');
+  closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal-overlay'); // Находим родительский модал
+      closeModal(modal.id); // Закрываем модал по ID
+    });
+  });
+});
+
+function openModal(modalId) {
+  const modal = document.querySelector(modalId);
+  modal.style.zIndex = 50 + modalCount; // Установите z-index
+  modal.style.visibility = 'visible'; // Показываем модал
+  document.body.classList.add('modal-open'); // Добавляем класс для скрытия прокрутки
+  modalCount++;
+
+}
+
+function closeModal(modalId) {
+  const modal = document.querySelector(`#${modalId}`);
+  modal.style.visibility = 'hidden'; // Скрываем модал
+  modalCount--;
+  if (modalCount === 0) {
+    document.body.classList.remove('modal-open'); // Убираем класс при закрытии всех модалей
+  }
+}
+
+
+</script>

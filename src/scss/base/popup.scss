@@ -1,0 +1,56 @@
+// styles.scss
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-50 px-3 py-8 overflow-auto; // Фиксированный оверлей
+
+}
+
+.modal-wrapper {
+  flex-direction: column;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal {
+  @apply w-full bg-white rounded-lg shadow-xl; // Ширина и белый фон
+ 
+  overflow: hidden; // Скрываем переполнение на уровне модала
+  
+  .modal-header {
+    @apply p-4 border-b border-Gray-400;
+    h2 {
+      p {
+        @apply pr-2;
+        &:not(:first-child) {
+          @apply border-l border-Gray-400 pl-2;
+        }
+        &:last-child {
+          @apply pr-0;
+        }
+      }
+    }
+    .close-btn {
+      @apply text-Gray-600 hover:text-red-600 transition-colors;
+      
+    }
+  }
+  .modal-footer {
+    @apply p-4 border-t border-Gray-400;
+  }
+
+  .modal-body {
+    @apply p-4; // Стили для тела модала
+    .custom-legend {
+      @apply ml-9;
+    }
+  }
+}
+
+// Стили для body, чтобы скрыть прокрутку при открытом модальном окне
+body.modal-open {
+  overflow: hidden; // Скрыть прокрутку тела
+}

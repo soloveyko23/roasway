@@ -1,0 +1,33 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.input {
+	@apply flex justify-center items-start self-stretch gap-2 px-4 py-3 rounded-lg bg-white border border-gray-400;
+}
+.input-small {
+	@apply flex justify-center items-start self-stretch gap-2 px-3 py-2 h-[2.125rem] rounded-lg text-sm bg-white border border-gray-400;
+}
+.calendar-input {
+  @apply pl-10;
+}
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
