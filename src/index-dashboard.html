@@ -525,251 +525,191 @@
                     </div>
                   </div>
                   <div class="widget-content px-5 flex flex-col">
-                    <!-- Ряд 1: 7 элементов — grid 1col mobile / 2col md / 4col lg / 7col 2xl -->
+                    <!-- Ряд 1: 7 элементов -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-7 divide-y md:divide-y-0 md:divide-x-2 divide-Gray-200 border-b border-Gray-200 pb-4 mb-4 2xl:pb-5 2xl:mb-5">
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex items-center justify-between">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Кликабельность</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">11.02%</p>
-                          </div>
-                          <div class="flex gap-1 flex-col items-end">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Кликабельность</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">11.02%</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
-                        <div class="open-modal cursor-pointer mt-2" data-modal="#modal1">
+                        <div class="open-modal cursor-pointer mt-2 hidden md:block" data-modal="#modal1">
                           <canvas id="simpleСhart-clickability"></canvas>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex items-center justify-between">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Installs/Impr</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">7.63%</p>
-                          </div>
-                          <div class="flex gap-1 flex-col items-end">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Installs/Impr</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">7.63%</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
-                        <div class="open-modal cursor-pointer mt-2" data-modal="#modal2">
+                        <div class="open-modal cursor-pointer mt-2 hidden md:block" data-modal="#modal2">
                           <canvas id="simpleСhart-installs"></canvas>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex items-center justify-between">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Доход</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">$163.5</p>
-                          </div>
-                          <div class="flex gap-1 flex-col items-end">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Доход</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">$163.5</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
-                        <div class="open-modal cursor-pointer mt-2" data-modal="#modal3">
+                        <div class="open-modal cursor-pointer mt-2 hidden md:block" data-modal="#modal3">
                           <canvas id="simpleСhart-income"></canvas>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex items-center justify-between">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Затраты</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">$96.4</p>
-                          </div>
-                          <div class="flex gap-1 flex-col items-end">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-systemRed-500"><use xlink:href="@img/icons/icons.svg#arrow-bottom"></use></svg></i>
-                              <span class="text-sm text-systemRed-500 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Затраты</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">$96.4</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-systemRed-500"><use xlink:href="@img/icons/icons.svg#arrow-bottom"></use></svg></i>
+                            <span class="text-sm text-systemRed-500 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
-                        <div class="mt-2">
+                        <div class="mt-2 hidden md:block">
                           <canvas id="simpleСhart-costs"></canvas>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Показы</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">11,709</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-systemRed-500"><use xlink:href="@img/icons/icons.svg#arrow-bottom"></use></svg></i>
-                              <span class="text-sm text-systemRed-500 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Показы</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">11,709</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-systemRed-500"><use xlink:href="@img/icons/icons.svg#arrow-bottom"></use></svg></i>
+                            <span class="text-sm text-systemRed-500 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Нажатия</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">573</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Нажатия</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">573</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Установки</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">158</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Установки</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">158</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- Ряд 2: 8 элементов — grid 1col mobile / 2col md / 4col lg / 8col 2xl -->
+                    <!-- Ряд 2: 8 элементов -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-8 divide-y md:divide-y-0 md:divide-x-2 divide-Gray-200">
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Покупки</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">245</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-systemRed-500"><use xlink:href="@img/icons/icons.svg#arrow-bottom"></use></svg></i>
-                              <span class="text-sm text-systemRed-500 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Покупки</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">245</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-systemRed-500"><use xlink:href="@img/icons/icons.svg#arrow-bottom"></use></svg></i>
+                            <span class="text-sm text-systemRed-500 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Триалы</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">28</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Триалы</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">28</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Цена триала</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">$32,75</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Цена триала</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">$32,75</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">CPA</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">$1.93</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">CPA</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">$1.93</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Средняя CPT</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">$1.34</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Средняя CPT</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">$1.34</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex flex-col gap-2.5">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">ROAS</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">35.8%</p>
-                          </div>
-                          <div class="flex gap-1 flex-col">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">ROAS</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">35.8%</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex items-center justify-between">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Installs/Impr</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">7.63%</p>
-                          </div>
-                          <div class="flex gap-1 flex-col items-end">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Installs/Impr</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">7.63%</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
-                        <div class="mt-2">
+                        <div class="mt-2 hidden md:block">
                           <canvas id="simpleСhart-installs2"></canvas>
                         </div>
                       </div>
                       <div class="widget-stat-item min-w-0 py-3 md:px-4">
-                        <div class="flex items-center justify-between">
-                          <div class="flex gap-1 flex-col">
-                            <p class="text-Gray-800 text-xs font-medium">Доход</p>
-                            <p class="text-Gray-900 md:text-2xl text-xl font-bold">$163.5</p>
-                          </div>
-                          <div class="flex gap-1 flex-col items-end">
-                            <div class="flex items-center gap-1">
-                              <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
-                              <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
-                            </div>
+                        <div class="flex items-center justify-between md:block">
+                          <p class="text-Gray-800 text-xs font-medium">Доход</p>
+                          <p class="text-Gray-900 md:text-2xl text-base font-bold md:mt-1">$163.5</p>
+                          <div class="flex items-center gap-1 md:mt-1">
+                            <i><svg class="icon w-2.5 h-2.5 text-secondaryTwo-700"><use xlink:href="@img/icons/icons.svg#arrow-up"></use></svg></i>
+                            <span class="text-sm text-secondaryTwo-700 font-semibold">$9.74</span>
                             <span class="text-Gray-600 text-sm font-medium">(-1.07%)</span>
                           </div>
                         </div>
-                        <div class="mt-2">
+                        <div class="mt-2 hidden md:block">
                           <canvas id="simpleСhart-income2"></canvas>
                         </div>
                       </div>
