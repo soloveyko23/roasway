@@ -45,7 +45,7 @@
   .modal-body {
     @apply p-4; // Стили для тела модала
     .custom-legend {
-      @apply ml-9;
+      @apply ml-9 mt-2;
     }
   }
 }

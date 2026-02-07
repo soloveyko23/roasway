@@ -971,7 +971,7 @@ class ChartManager extends BaseChartManager {
     if (existingLegend) existingLegend.remove();
 
     const legendContainer = document.createElement('div');
-    legendContainer.className = 'custom-legend mt-3';
+    legendContainer.className = 'custom-legend';
 
     chart.data.datasets.forEach((dataset, index) => {
       const legendItem = this._createLegendItem(dataset, index, chart);

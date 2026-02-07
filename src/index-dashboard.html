@@ -528,7 +528,7 @@
                     <!-- Ряд 1: 7 элементов -->
                     <div class="widget-summary-grid grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-7 border-b border-Gray-200 pb-4 mb-4 2xl:pb-5 2xl:mb-5">
                       <div class="widget-stat-item has-chart min-w-0 py-3 md:px-4">
-                        <div class="md:flex md:items-center md:justify-between">
+                        <div class="flex md:items-center justify-between">
                           <div class="flex gap-1 flex-col">
                             <p class="text-Gray-800 text-xs font-medium">Кликабельность</p>
                             <p class="text-Gray-900 md:text-2xl text-base font-bold">11.02%</p>
@@ -546,7 +546,7 @@
                         </div>
                       </div>
                       <div class="widget-stat-item has-chart min-w-0 py-3 md:px-4">
-                        <div class="md:flex md:items-center md:justify-between">
+                        <div class="flex md:items-center justify-between">
                           <div class="flex gap-1 flex-col">
                             <p class="text-Gray-800 text-xs font-medium">Installs/Impr</p>
                             <p class="text-Gray-900 md:text-2xl text-base font-bold">7.63%</p>
@@ -564,7 +564,7 @@
                         </div>
                       </div>
                       <div class="widget-stat-item has-chart min-w-0 py-3 md:px-4">
-                        <div class="md:flex md:items-center md:justify-between">
+                        <div class="flex md:items-center justify-between">
                           <div class="flex gap-1 flex-col">
                             <p class="text-Gray-800 text-xs font-medium">Доход</p>
                             <p class="text-Gray-900 md:text-2xl text-base font-bold">$163.5</p>
@@ -582,7 +582,7 @@
                         </div>
                       </div>
                       <div class="widget-stat-item has-chart min-w-0 py-3 md:px-4">
-                        <div class="md:flex md:items-center md:justify-between">
+                        <div class="flex md:items-center justify-between">
                           <div class="flex gap-1 flex-col">
                             <p class="text-Gray-800 text-xs font-medium">Затраты</p>
                             <p class="text-Gray-900 md:text-2xl text-base font-bold">$96.4</p>
@@ -703,7 +703,7 @@
                         </div>
                       </div>
                       <div class="widget-stat-item has-chart min-w-0 py-3 md:px-4">
-                        <div class="md:flex md:items-center md:justify-between">
+                        <div class="flex md:items-center justify-between">
                           <div class="flex gap-1 flex-col">
                             <p class="text-Gray-800 text-xs font-medium">Installs/Impr</p>
                             <p class="text-Gray-900 md:text-2xl text-base font-bold">7.63%</p>
@@ -721,7 +721,7 @@
                         </div>
                       </div>
                       <div class="widget-stat-item has-chart min-w-0 py-3 md:px-4">
-                        <div class="md:flex md:items-center md:justify-between">
+                        <div class="flex md:items-center justify-between">
                           <div class="flex gap-1 flex-col">
                             <p class="text-Gray-800 text-xs font-medium">Доход</p>
                             <p class="text-Gray-900 md:text-2xl text-base font-bold">$163.5</p>
@@ -742,7 +742,7 @@
                   </div>
                 </div>
   
-                <div class="widget-body py-5 rounded-xl shadow-custom bg-white">
+                <div class="widget-body py-5 rounded-xl shadow-custom bg-white min-w-60">
                   <div class="widget-body-header px-5 mb-5 flex items-center gap-3 flex-wrap justify-between">
                     <div class="widget-body-header__left">
                       <h2 class="text-xl font-medium text-Gray-900">
@@ -751,9 +751,9 @@
                     </div>
                   </div>
                   <div class="widget-body-content">
-                    <div class="widget-chart-container 2xl:block sm:grid sm:grid-cols-2 px-5 2xl:space-y-5">
+                    <div class="widget-chart-container 2xl:block grid grid-cols-1 lg:grid-cols-1 sm:grid-cols-2 px-5 2xl:space-y-5">
                       <div class="widget-content-row">
-                        <div class="flex mb-3 justify-start items-center relative gap-2">
+                        <div class="flex mb-3 justify-start items-center relative gap-2 w-full">
                           <svg
                             width="18"
                             height="18"
@@ -788,7 +788,7 @@
                             </p>
                           </div>
                         </div>
-                        <div class="widget-stat-item !pr-0 !mr-0">
+                        <div class="widget-stat-item !pr-0 !mr-0 w-full">
                           <div class="widget-stat-item__header">
                             <div class="flex justify-between">
                               <div class="flex gap-1 flex-col">
@@ -814,7 +814,7 @@
                       </div>
   
                       <div class="widget-content-row">
-                        <div class="flex mb-3 justify-start items-center relative gap-2">
+                        <div class="flex mb-3 justify-start items-center relative gap-2 w-full">
                           <svg
                             width="18"
                             height="18"
@@ -849,7 +849,7 @@
                             </p>
                           </div>
                         </div>
-                        <div class="widget-stat-item !pr-0 !mr-0">
+                        <div class="widget-stat-item !pr-0 !mr-0 w-full">
                           <div class="widget-stat-item__header">
                             <div class="flex justify-between">
                               <div class="flex gap-1 flex-col">
@@ -2497,12 +2497,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="widget-body-content px-5" data-campaign-trials="trials-income">
+                  <div class="widget-body-content sm:px-5" data-campaign-trials="trials-income">
                     <div class="flex gap-6 items-start md:flex-row flex-col">
                       <!-- Doughnut Chart -->
                       <div class="relative flex-shrink-0 md:w-[320px] md:h-[320px] w-52 md:mx-0 mx-auto" data-trials-chart></div>
                       <!-- Table -->
-                      <div class="flex-1 min-w-0">
+                      <div class="flex-1 min-w-0 w-full overflow-hidden">
                         <div class="table-type-one rounded-lg w-full" data-table>
                           <div class="table-type-one__wrapper relative">
                             <div class="table-type-one__body table-overflow-thumb overflow-x-auto">

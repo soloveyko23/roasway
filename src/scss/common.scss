@@ -105,6 +105,7 @@ canvas {
   display: flex;
   align-items: center;
   gap: 20px;
+  @apply mt-3 flex-wrap;
 }
 .custom-legend-item {
   display: flex;
@@ -175,7 +176,7 @@ canvas {
       @apply border-b-0 pb-0 mb-0;
     }
   }
-  @media (max-width: 1535px) and (min-width: 640px) {
+  @media (max-width: 992px) and (min-width: 640px) {
     @apply border-r border-Gray-200 pr-4 mr-4 gap-y-2 flex items-center justify-center flex-col;
     &:last-child {
       @apply border-r-0 pr-0 mr-0;
