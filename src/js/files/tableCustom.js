@@ -290,44 +290,42 @@ class RoaswayTable {
    * Определяет, нужно ли растягивать колонки
    */
   shouldStretchColumns(state, totalFitWidth, tableWidth) {
-    // Если колонок больше 7, не растягиваем
-    if (state.headerCells.length > 7) return false;
-
     // Считаем общую ширину всех колонок
     const totalWidth = state.maxColumnWidths.reduce((sum, width) => sum + width, 0);
-    
-    // Если общая ширина меньше ширины таблицы на 20% или более, то растягиваем
-    const availableSpace = tableWidth - totalWidth;
-    return availableSpace > (tableWidth * 0.2);
+
+    // Растягиваем если общая ширина меньше ширины таблицы
+    return totalWidth < tableWidth;
   }
 
   /**
    * Растягивает колонки пропорционально доступному пространству
    */
   stretchColumns(state, totalFitWidth, tableWidth) {
-    // Получаем не-fit колонки
+    const totalCurrentWidth = state.maxColumnWidths.reduce((sum, w) => sum + w, 0);
+    const extraSpace = tableWidth - totalCurrentWidth;
+
+    if (extraSpace <= 0) return;
+
+    // Получаем не-fit колонки для растяжения
     const nonFitColumns = state.headerCells.map((header, index) => ({
       index,
       width: state.maxColumnWidths[index],
       isFit: header.classList.contains('fit')
     })).filter(col => !col.isFit);
 
-    // Если нет не-fit колонок, выходим
-    if (nonFitColumns.length === 0) return;
+    // Если нет не-fit колонок — растягиваем все
+    const stretchable = nonFitColumns.length > 0 ? nonFitColumns :
+      state.maxColumnWidths.map((w, i) => ({ index: i, width: w }));
 
-    // Считаем доступное пространство для растяжения
-    const availableWidth = tableWidth - totalFitWidth;
-    const totalNonFitWidth = nonFitColumns.reduce((sum, col) => sum + col.width, 0);
-    
-    // Распределяем дополнительное пространство пропорционально
-    nonFitColumns.forEach(col => {
-      const ratio = col.width / totalNonFitWidth;
-      const newWidth = Math.floor(availableWidth * ratio);
-      
-      // Устанавливаем новую ширину, но не меньше текущей
-      state.maxColumnWidths[col.index] = Math.max(col.width, newWidth);
-      
-      
+    if (stretchable.length === 0) return;
+
+    const totalStretchableWidth = stretchable.reduce((sum, col) => sum + col.width, 0);
+
+    // Распределяем свободное место пропорционально текущим ширинам
+    stretchable.forEach(col => {
+      const ratio = totalStretchableWidth > 0 ? col.width / totalStretchableWidth : 1 / stretchable.length;
+      const addWidth = Math.floor(extraSpace * ratio);
+      state.maxColumnWidths[col.index] = col.width + addWidth;
     });
   }
 
