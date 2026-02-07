@@ -1,4 +1,12 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.widget-body-header__right {
+  > .relative.inline-block {
+    @apply min-w-0 flex-1;
+  }
+  > .relative:last-child:not(.inline-block) {
+    @apply flex-shrink-0;
+  }
+}
 .tabs-type-one {
   li {
     @apply whitespace-nowrap;
