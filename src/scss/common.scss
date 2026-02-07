@@ -197,23 +197,11 @@ canvas {
   > .widget-stat-item {
     @apply border-Gray-200;
   }
-  // Мобильные < 480px: графики на всю ширину
+  // < 480px: графики на всю ширину, горизонтальные бордеры
   @media (max-width: $mobileSmall) {
     > .widget-stat-item.has-chart {
       grid-column: span 2;
     }
-  }
-  // Все размеры: правые бордеры вертикальные
-  @media (min-width: $mobileSmall) {
-    > .widget-stat-item {
-      @apply border-r-2 border-Gray-200 px-4;
-      &:last-child {
-        @apply border-r-0;
-      }
-    }
-  }
-  // На 2 колонки — убрать правый бордер у каждого 2-го (последнего в ряду)
-  @media (max-width: $mobileSmall) {
     > .widget-stat-item {
       @apply border-b border-Gray-200 py-3;
       &:last-child {
@@ -221,9 +209,28 @@ canvas {
       }
     }
   }
-  // sm (640px+) — 4 колонки: убрать правый бордер у каждого 4-го
-  @media (min-width: 640px) {
+  // 480px+ : 2 колонки, вертикальные бордеры
+  @media (min-width: $mobileSmall) {
+    > .widget-stat-item {
+      @apply border-r-2 border-Gray-200 px-4;
+      // каждый 2-й — убрать правый бордер (конец ряда в 2-кол сетке)
+      &:nth-child(2n) {
+        @apply border-r-0;
+      }
+      &:last-child {
+        @apply border-r-0;
+      }
+    }
+  }
+  // lg (1024px+) — 4 колонки: бордер у каждого 2-го вернуть, убрать у каждого 4-го
+  @media (min-width: 1024px) {
+    > .widget-stat-item:nth-child(2n) {
+      @apply border-r-2;
+    }
     > .widget-stat-item:nth-child(4n) {
+      @apply border-r-0;
+    }
+    > .widget-stat-item:last-child {
       @apply border-r-0;
     }
   }
